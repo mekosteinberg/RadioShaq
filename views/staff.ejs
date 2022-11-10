@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/headlinks.ejs')%>
+</head>
+
+<body>
+    <header>
+        <%- include('./partials/header.ejs')%>
+    </header>
+    <div class="staffMainbox">
+        <%staffLinks%>
+            <ul>
+                <% for(let i=0; i < staffLinks.length; i++) { %>
+                    <li>
+                        <h3><%= staffLinks[i].name %></h3>
+                        <a target="_blank" href= <%=staffLinks[i].medialink %> >
+                            <img src= <%= staffLinks[i].picture %> alt= <%= staffLinks[i].name %> > 
+                        </a>
+                    </li>
+                    <% } %>
+            </ul>
+    </div>
+    <footer>
+        <%- include('./partials/footer.ejs')%>
+    </footer>
+</body>
+
+</html>

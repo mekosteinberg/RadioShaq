@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/headlinks.ejs') %>
+</head>
+
+<body>
+    <header>
+        <%- include('./partials/header.ejs') %>
+    </header>
+    <div class="linkBox">
+            <%partnerLinks%>
+                <ul>
+                    <% for(let i=0; i < partnerLinks.length; i++) { %>
+                        <li>
+                            <a target="_blank" href=<%=partnerLinks[i].linksite %>>
+                                <%= partnerLinks[i].storename %>
+                            </a>
+                        </li>
+                        <% } %>
+                </ul>
+    </div>
+    <footer>
+        <%- include('./partials/footer.ejs') %>
+    </footer>
+</body>
+
+</html>
